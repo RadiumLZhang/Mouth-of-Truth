@@ -57,7 +57,7 @@ def main():
                     answer = response['answer'].lower() + ".wav"
                     terminal_ui.append_text("GPT: " + response['answer'] + '\n')
                     try:
-                        terminal_ui.append_text("Category: " + response['category'] + '\n')
+                        terminal_ui.append_text("Category: " + response['category_name'] + '\n')
                     except KeyError:
                         # do nothing
                         pass
