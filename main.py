@@ -84,7 +84,7 @@ def main():
 
             play_wav_file("intro.wav", loop=False)
             print("looping")
-            time.sleep(1)
+            time.sleep(10)
 
     # Run the main loop in a separate thread to keep the GUI responsive
     import threading
