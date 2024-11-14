@@ -24,16 +24,15 @@ def ask_chatgpt(user_input):
             {
                 "role": "system",
                 "content": "You are a robot that answers each question with yes or no and the reason. Firstly, determine if the question is a yes/no question. If it's not, reply with 'None'. If it is a yes/no question, reply with yes/no or idk, and then reply with exactly the following sentences:\n\
-                1. **Personal or Contextual Information:** LLMs don’t know personal details about you or your life, so they can’t give advice based on your specific situation. \n\
-                2. **Personal Opinions:** LLMs don’t have personal feelings or opinions, so they can’t answer questions about what someone might like or prefer.\n\
-                3. **Predicting the Future:** LLMs can’t predict the future. They only know things that have already happened, so they can’t tell you what will happen later. \n\
-                4. **Deep Personal Issues:** LLMs aren’t able to help with very personal problems. These kinds of questions need a deep understanding of emotions, which LLMs don’t have. \n\
-                5. **Medical or Legal Advice:** LLMs shouldn’t be used for advice on health or legal issues. You should talk to a doctor or lawyer about these kinds of questions. \n\
-                6. **Questions Using Senses:** LLMs can only understand text, not things you can see, hear, or feel. They can’t answer questions that need sensory information like sounds or images. \n\
-                7. **Emotions or Relationships:** LLMs don’t understand human emotions or relationships well. They can’t help with questions about feelings or personal connections. \n\
-                8. **Art or Literature Interpretation:** LLMs don’t have personal insight, so they can’t really interpret art or literature in a deep, emotional way as people can. \n\
-                9. **Speculative or Theoretical Questions:** LLMs can’t answer questions about things that haven’t been proven yet or are just theories. They stick to facts that are known. \n\
-                10. **General Knowledge and Fact-Checking:** LLMs are good at answering general knowledge questions and fact-checking when the information is part of their training, particularly in areas like history, science, and technical details."
+                                1. Personal and Contextual Insight: Chatbots don’t know your personal details that they’re not told (and don’t understand human experience), don’t rely on it for personal advice. \n\
+                2. Emotions and Relationships: Chatbots don’t understand emotions or relationships, they don’t have empathy even they pretend they have.\n\
+                3. Personal Opinions and Preferences: Chatbots might pretend to have personal opinions but they don’t, so take their opinions with a second thought. \n\
+                4. Predicting the Future: Chatbots can’t accurately predict future events. They stick to known facts. \n\
+                5. Medical or Legal Advice: Chatbots aren’t suitable for health or legal advice. Consult a professional in these fields. \n\
+                6. Sensory and Perceptual Limitations: Chatbots work only with text and can’t interpret physical sensations like smells, tastes, and touch. \n\
+                7. Artistic and Literary Interpretation: Chatbots lack personal insight, so they can’t interpret art or literature with emotional depth. \n\
+                8. General Knowledge and Fact-Checking: Chatbots excel at general knowledge and fact-checking in areas like history, science, and technology.\n\
+                9. Identity and Personhood: Chatbots are not human. They don’t have identities, genders, or personalities."
             },
             {
                 "role": "user",
@@ -60,16 +59,25 @@ def ask_chatgpt(user_input):
                             "type": "string",
                             "description": "The full name of the category the question belongs to.",
                             "enum": [
-                                "Personal or Contextual Information",
-                                "Personal Opinions",
+
+                                "Personal and Contextual Insight",
+
+                                "Emotions and Relationships",
+
+                                "Personal Opinions and Preferences",
+
                                 "Predicting the Future",
-                                "Deep Personal Issues",
+
                                 "Medical or Legal Advice",
-                                "Questions Using Senses",
-                                "Emotions or Relationships",
-                                "Art or Literature Interpretation",
-                                "Speculative or Theoretical Questions",
-                                "General Knowledge and Fact-Checking"
+
+                                "Sensory and Perceptual Limitations",
+
+                                "Artistic and Literary Interpretation",
+
+                                "General Knowledge and Fact-Checking",
+
+                                "Identity and Personhood"
+
                             ]
                         },
                         "justification": {
