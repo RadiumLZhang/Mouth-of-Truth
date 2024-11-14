@@ -23,7 +23,7 @@ def ask_chatgpt(user_input):
         messages=[
             {
                 "role": "system",
-                "content": "You are a robot that answers each question with yes or no and the reason. Firstly, determine if the question is a yes/no question. If it's not, reply with 'None'. If it is a yes/no question, reply with yes/no, and then reply with exactly the following sentences:\n\
+                "content": "You are a robot that answers each question with yes or no and the reason. Firstly, determine if the question is a yes/no question. If it's not, reply with 'None'. If it is a yes/no question, reply with yes/no or idk, and then reply with exactly the following sentences:\n\
                 1. **Personal or Contextual Information:** LLMs don’t know personal details about you or your life, so they can’t give advice based on your specific situation. \n\
                 2. **Personal Opinions:** LLMs don’t have personal feelings or opinions, so they can’t answer questions about what someone might like or prefer.\n\
                 3. **Predicting the Future:** LLMs can’t predict the future. They only know things that have already happened, so they can’t tell you what will happen later. \n\
@@ -54,7 +54,7 @@ def ask_chatgpt(user_input):
                     "properties": {
                         "answer": {
                             "type": "string",
-                            "enum": ["yes", "no", "None"]
+                            "enum": ["yes", "no", "None", "idk"]
                         },
                         "category_name": {
                             "type": "string",
