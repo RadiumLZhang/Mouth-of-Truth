@@ -62,7 +62,19 @@ def main():
                         # do nothing
                         pass
                     try:
-                        terminal_ui.append_text('Justification: ' + response['justification'] + '\n')
+                        categories = {
+                            "Personal and Contextual Insight": "Chatbots don’t know your personal details that they’re not told (and don’t understand human experience), don’t rely on it for personal advice.",
+                            "Emotions and Relationships": "Chatbots don’t understand emotions or relationships, they don’t have empathy even they pretend they have.",
+                            "Personal Opinions and Preferences": "Chatbots might pretend to have personal opinions but they don’t, so take their opinions with a second thought.",
+                            "Predicting the Future": "Chatbots can’t accurately predict future events. They stick to known facts.",
+                            "Medical or Legal Advice": "Chatbots aren’t suitable for health or legal advice. Consult a professional in these fields.",
+                            "Sensory and Perceptual Limitations": "Chatbots work only with text and can’t interpret physical sensations like smells, tastes, and touch.",
+                            "Artistic and Literary Interpretation": "Chatbots lack personal insight, so they can’t interpret art or literature with emotional depth.",
+                            "General Knowledge and Fact-Checking": "Chatbots excel at general knowledge and fact-checking in areas like history, science, and technology.",
+                            "Identity and Personhood": "Chatbots are not human. They don’t have identities, genders, or personalities."
+                        }
+                        terminal_ui.append_text('Justification: ' + categories[response['category_name']] + '\n')
+                        #terminal_ui.append_text('Justification: ' + response['justification'] + '\n')
                     except KeyError:
                         # do nothing
                         pass
