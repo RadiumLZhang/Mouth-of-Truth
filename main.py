@@ -82,6 +82,7 @@ def main():
                     threading.Thread(target=else_run, daemon=True).start()
                     last_was_else = True
 
+            play_wav_file("intro.wav", loop=False)
             print("looping")
             time.sleep(1)
 
